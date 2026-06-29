@@ -9,8 +9,7 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 # --- КОНФИГУРАЦИЯ ---
 #load_dotenv()
 API_TOKEN = os.getenv('BOT_TOKEN')
-if not API_TOKEN:
-    raise ValueError("Не найден BOT_TOKEN в .env файле. Создайте .env и добавьте BOT_TOKEN=ваш_токен")
+
 
 BASE_URL = "https://www.themealdb.com/api/json/v1/1"
 
