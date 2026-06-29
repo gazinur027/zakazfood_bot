@@ -7,6 +7,10 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # --- КОНФИГУРАЦИЯ ---
 API_TOKEN = os.getenv('BOT_TOKEN')
+print(f"DEBUG: BOT_TOKEN = {API_TOKEN}")
+if not API_TOKEN:
+    print("ERROR: BOT_TOKEN is None!")
+    print("Available env vars:", list(os.environ.keys()))
 BASE_URL = "https://www.themealdb.com/api/json/v1/1"
 
 bot = Bot(token=API_TOKEN)
